@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+
+    <style>
+      .box {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+        /* transform: translateX(400px); */
+        /* transform: translate(100px, 200px); */
+
+        /* transform-origin CSS property sets the origin for an element's transformations 
+           By default, it is set to Center.
+        */
+        transform-origin: top left;
+        /* Multiple Transforms at once */
+        transform: rotate(45deg) scale(2);
+      }
+
+      h1 {
+        margin-top: 5rem;
+
+        transform: rotate(90deg);
+        display: inline-block;
+      }
+
+      body {
+        background: linear-gradient(to bottom right, #3899ee, #38e2ee);
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn {
+        background-color: #fff;
+        color: #401aff;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+        border-radius: 0.3rem;
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 1rem;
+        border: none;
+        cursor: pointer;
+
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .btn1 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+
+      .btn1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 14px rgba(0, 0, 0, 0.22);
+      }
+
+      .btn2 {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 14px rgba(0, 0, 0, 0.22);
+      }
+
+      .btn2:hover {
+        transform: scale(0.95);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18), 0 6px 6px rgba(0, 0, 0, 0.22);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Transform</h1>
+    <div class="box"></div> -->
+
+    <button class="btn btn1">click me</button>
+    <button class="btn btn2">click me</button>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+  </head>
+
+  <style>
+    /* transition: property duration timing-function delay|initial|inherit; */
+    /* note - for the browser performance, it is best to animate only two different properties.
+        1. opacity
+        2. transform
+       Because there is no re-calculation for DOM Layout & Painting.
+       Avoid applying transition to Width & Margin.
+    */
+
+    .btn {
+      border: 2px solid #000;
+      padding: 10px 20px;
+      text-transform: capitalize;
+      display: inline-block;
+      margin-top: 2rem;
+      cursor: pointer;
+
+      /* apply transition anytime background color changes, not on hover only when applying it directly to an element
+        note: On mouse leave, it will take same amount of transition time
+       */
+      /* transition: background-color 0.5s; */
+
+      /* multiple transitions */
+      transition: background-color 0.2s, color 0.7s, border-radius 0.3s;
+    }
+
+    .btn:hover {
+      /* apply transition on hover only not on anytime background color changes by other means 
+        and it don't apply transition on mouse leave or release which gets cut off immediately */
+      /* transition: background-color 0.5s; */
+      background-color: orangered;
+      color: #fff;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <a class="btn">hover me</a>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Form Controls</h2>
+
+    <!-- <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <form action="#">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" placeholder="first name" id="firstName"/>
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" placeholder="last name" id="lastName"/>
+
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="password" id="password"/>
+
+      <input type="number" placeholder="enter number">
+      <input type="email" placeholder="email">
+
+      <button type="submit">Submit</button>
+    </form> 
+
+    <hr>
+    <h2>Textarea</h2>
+    <form action="#">
+      <textarea name="" id="" cols="30" rows="10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, debitis.
+      </textarea>
+    </form>
+
+    <h2>Range Inputs</h2>
+    <form action="">
+      <input type="range" min="0" max="100" step="10" name="volumeLevel" value="0">
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Checkbox</h2>
+    <form action="">
+      <label for="checkbox">I agree to the terms of service.</label>
+      <input type="checkbox" id="checkbox" name="checkbox">
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Select</h2>
+    <form action="">
+      <label for="size">Sizes</label>
+      <select name="size" id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Radio Button</h2>
+    <form action="">
+      <label for="phone">Call Me</label>
+      <input type="radio" id="phone" name="contact" value="phone">
+
+      <label for="email">Email</label>
+      <input type="radio" id="email" name="contact" value="email">
+
+      <button type="submit">Submit</button>
+    </form>
+
+
+</html>

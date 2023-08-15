@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 100;
+
+        /* 'normal' by default */
+        font-style: italic;
+
+        /* centers with an element, not page */
+        text-align: center;
+        width: 500px;
+
+        text-shadow: -2px 2px 2px magenta;
+
+        text-transform: uppercase;
+      }
+
+      h3 {
+        text-transform: capitalize;
+        text-decoration: line-through red;
+        text-decoration-thickness: 2px;
+
+        font-weight: 400;
+      }
+
+      p {
+        /* normal = 400, bold = 700 */
+        font-weight: 400;
+
+        text-align: center;
+
+        letter-spacing: 3px;
+        word-spacing: 20px;
+
+        /* double of current font size */
+        line-height: 2;
+      }
+
+      #cast {
+        /* list-style-type: "*"; */
+        list-style-type: "\1F44D";
+        /* Include above marker inside of li element */
+        list-style-position: inside;
+
+        /* Custom marker */
+        /* list-style-image: url("image"); */
+      }
+
+      a:visited,
+      a:focus {
+        color: blue;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        cursor: alias;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text Styling</h1>
+
+    <h3>Styling is always fun!</h3>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, expedita! Nobis, asperiores quidem voluptatem
+      quos nam esse quae blanditiis illum.
+    </p>
+
+    <ul id="cast">
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+      <li>list 5</li>
+    </ul>
+
+    <a href="">Link 1</a>
+    <a href="">Link 2</a>
+    <a href="">Link 3</a>
+  </body>
+</html>

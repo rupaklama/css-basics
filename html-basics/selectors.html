@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+
+    <style>
+      /* universal selector */
+      * {
+        box-sizing: border-box;
+        /* margin: 0;
+        padding: 0; */
+      }
+
+      /* attribute selector */
+      input[type="search"] {
+        border: 2px solid red;
+        padding: 6px 12px;
+        border-radius: 10px;
+        /* outline: none; */
+        background-color: gold;
+      }
+
+      /* a link that starts with '#' */
+      a[href^="#"] {
+        color: red;
+      }
+
+      /* html element selector */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Selectors</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quisquam dolore qui at adipisci harum, error quis
+      accusantium tempore illum placeat debitis cumque modi explicabo. Iste esse laborum quae beatae!
+    </p>
+
+    <input type="search" placeholder="enter text" />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos autem atque, culpa ullam ad laboriosam ea?
+      Asperiores perspiciatis voluptatum deleniti iusto molestiae est doloremque, dolore numquam, dolor illum sequi
+      earum voluptates voluptatem animi vel distinctio hic quaerat quas! Suscipit illo, aspernatur numquam consequuntur,
+      mollitia enim recusandae illum autem blanditiis ducimus error eum explicabo voluptas eaque esse non aperiam
+      asperiores dicta fugit facere vitae. A corrupti cum illo consectetur distinctio tenetur inventore praesentium
+      deleniti vel quas iste minus sapiente atque ad sint ipsum voluptas, nam rerum quisquam fuga maiores quos! Magnam
+      in tempore doloribus velit. Voluptates aliquam repellendus unde perspiciatis fugiat?
+    </p>
+
+    <a href="#heading">Heading</a>
+  </body>
+</html>
