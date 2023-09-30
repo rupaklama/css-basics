@@ -24,12 +24,15 @@ h1 {
   width: 100%;
   max-width: 900px;
   border-radius: 1rem;
+  padding: 0 3.5rem 3.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  /* height: 70vh; */
+  overflow: hidden;
+  position: relative;
 }
 
 .tabs {
@@ -37,14 +40,16 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   color: rgb(200, 175, 255);
-  border-bottom: 3px solid rgb(233, 233, 255);
+  /* border: 1px solid red; */
+  /* border-bottom: 3px solid blue; */
 
   display: flex;
   justify-content: space-around;
+  padding: 1rem;
 }
 
 .tabs p {
-  padding: 1rem;
+  padding: 8px;
 }
 
 .tabs p:hover {
@@ -54,6 +59,39 @@ h1 {
 
 .tabs p.active {
   color: rgb(83, 49, 156);
-  border-bottom: 3px solid rgb(83, 49, 156);
-  align-self: stretch;
+  /* border-bottom: 3px solid rgb(83, 49, 156);
+  padding-bottom: 38px;
+  z-index: 1; */
+  position: relative;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(231, 231, 231);
+  position: absolute;
+  top: 100px;
+}
+
+/* .underline {
+  width: 100%;
+  height: 4px;
+  display: inline-block;
+  background-color: purple;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+} */
+
+/* pseudo element */
+.tabs .active::before {
+  content: "";
+  width: 200%;
+  height: 4px;
+  background-color: rgb(83, 49, 156);
+  position: absolute;
+  bottom: -33px;
+  left: -50%;
+  z-index: 2;
+  border-radius: 10px;
 }
