@@ -95,3 +95,43 @@ h1 {
   z-index: 2;
   border-radius: 10px;
 }
+
+.toggle-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  /* border: 1px solid red; */
+
+  align-items: center;
+}
+
+.toggle-wrapper img {
+  height: 50px;
+  margin: 0 1rem;
+}
+
+.toggle {
+  background-color: rgb(83, 49, 156);
+  height: 2rem;
+  width: 8.7rem;
+  border-radius: 20px;
+  padding: 0 4px 0 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle span:first-of-type {
+  color: #fff;
+}
+
+.toggle span:last-of-type {
+  background-color: #fff;
+  color: rgb(83, 49, 156);
+  padding: 4px 16px;
+  border-radius: 20px;
+}
