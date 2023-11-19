@@ -1,0 +1,104 @@
+body {
+  background-color: red;
+  color: #fff;
+}
+
+/* 'only' is a keyword called a 'logical operator' to prevent older browsers which don't support 
+    media queries from applying all media styles. The older browsers apply media rules by default even 
+    if it don't support media queries.
+
+    'screen' is the media type which helps us write styles for different devices for browser/web screen sizes. 
+
+    '(max-width) is media feature. There are many other media features available. eg. min-height, orientation, resolution etc
+*/
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: yellowgreen;
+  }
+}
+
+/* note: when 'Height' becomes greater than 'Width', it is consider to be 'Portrait' orientation */
+@media only screen and (orientation: portrait) {
+  body {
+    background-color: blue;
+  }
+
+  h1::before {
+    content: "portrait ";
+  }
+}
+
+/* note: when 'Width' becomes greater than 'Height', it is consider to be 'Landscape' orientation */
+@media only screen and (orientation: landscape) {
+  h1::before {
+    content: "landscape ";
+  }
+}
+
+/* note: 'OR' logical operator <600 or >1500 */
+@media (max-width: 600px) or (min-width: 1500px) {
+  body {
+    background-color: purple;
+  }
+}
+
+/* Common Responsive Breakpoints for different screen sizes */
+@media only screen and (max-width: 480px) {
+  /* mobile screen size */
+  body {
+    background-color: yellow;
+    color: black;
+  }
+
+  body::before {
+    content: "MOBILE SIZE";
+  }
+}
+
+/* note: when applying ranges, no need to worry about the media rules order */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* tablet screen size  */
+  body {
+    background-color: orange;
+    color: black;
+  }
+
+  body::before {
+    content: "TABLET SIZE";
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Small Desktop screen size  */
+  body {
+    background-color: lightseagreen;
+    color: black;
+  }
+
+  body::before {
+    content: "SMALL DESKTOP SIZE";
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Large Desktop screen size  */
+  body {
+    background-color: thistle;
+    color: black;
+  }
+
+  body::before {
+    content: "LARGE DESKTOP SIZE";
+  }
+}
+
+/* printer specific when printing out */
+h1 {
+  font-size: 3rem;
+}
+
+@media only print {
+  h1 {
+    font-size: 10rem;
+  }
+}
