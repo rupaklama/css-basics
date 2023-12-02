@@ -24,7 +24,7 @@ body {
   }
 
   h1::before {
-    content: "portrait ";
+    content: "Portrait ";
   }
 }
 
@@ -94,11 +94,47 @@ body {
 
 /* printer specific when printing out */
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 @media only print {
   h1 {
     font-size: 10rem;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: red;
+  font-size: 1.5rem;
+  margin: 0 20px;
+}
+
+nav h1 {
+  margin-left: 40px;
+}
+
+nav .links {
+  margin-right: 40px;
+}
+
+@media only screen and (max-width: 769px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav h1 {
+    margin-left: 0;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
