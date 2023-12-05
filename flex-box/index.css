@@ -249,6 +249,47 @@ h1 {
   position: relative;
 }
 
+@media only screen and (max-width: 750px) {
+  /* 
+  .card:nth-of-type(2) {
+    order: -2;
+  } */
+
+  .card-wrapper {
+    flex-wrap: wrap-reverse;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  .container {
+    padding: 0 16px;
+  }
+
+  .sessions-card {
+    width: 80%;
+  }
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  .toggle-wrapper {
+    width: 90%;
+    justify-content: space-evenly;
+  }
+}
+
 .card:hover {
   transform: translateY(-8px);
 }
