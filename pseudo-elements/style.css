@@ -1,0 +1,80 @@
+body {
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1::before {
+  content: "👋";
+  margin-right: 1rem;
+}
+
+h1::after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: inline-block;
+
+  margin-left: 1rem;
+}
+
+blockquote {
+  display: inline-block;
+  font-size: 2rem;
+  font-style: italic;
+  position: relative;
+}
+
+/* Creating Decorative Quotes With Pseudo-Elements */
+blockquote::before {
+  /* content: "“"; */
+  content: open-quote;
+
+  top: -20px;
+  left: -35px;
+}
+
+blockquote::after {
+  /* content: "”"; */
+  content: close-quote;
+  bottom: -20px;
+}
+
+blockquote::before,
+blockquote::after {
+  color: red;
+  font-size: 4rem;
+  /* line-height: 0;
+  vertical-align: -0.3em; */
+  position: absolute;
+}
+
+.box {
+  width: 260px;
+  height: 260px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 310px;
+  height: 310px;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+  z-index: -1;
+}
