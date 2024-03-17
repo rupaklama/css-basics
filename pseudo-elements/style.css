@@ -3,6 +3,53 @@ body {
   box-sizing: border-box;
 }
 
+/* 
+  custom checkbox 
+  note: checkbox and radio buttons are not styled by default, they ignore css rules like color, background-color, etc.
+*/
+.toggle {
+  opacity: 0;
+}
+
+.toggle + label {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.toggle + label::before {
+  content: "";
+  background-color: #c6d0cc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.toggle + label::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.toggle:checked + label::before {
+  background-color: #8bc34a;
+}
+
+.toggle:checked + label::after {
+  transform: translateX(2rem);
+}
+
 h1 {
   font-size: 4rem;
 }
@@ -77,4 +124,40 @@ blockquote::after {
   height: 310px;
   background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
   z-index: -1;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 20px 40px;
+  border: 2px solid #e91e63;
+  border-radius: 25px;
+  color: #e91e63;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.btn::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #e91e63;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Calc</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .box1 {
+      background-color: tomato;
+      height: 300px;
+      width: 40%;
+      float: left;
+      margin-right: 20px;
+    }
+    .box2 {
+      background-color: olivedrab;
+      height: 300px;
+      /* width: 60%; */
+      width: calc(60% - 20px);
+      float: right;
+
+      position: relative;
+    }
+
+    .tiny-box {
+      background-color: #fff;
+      height: 100px;
+      width: 100px;
+
+      position: absolute;
+      /* top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+    }
+  </style>
+  <body>
+    <h1>CSS Calc</h1>
+    <h2>Calc() function lets us do some quick math within our CSS!</h2>
+    <h4>We can use 4 operators: +, -, *, /</h4>
+    <h5>Diving by 0 will cause errors.</h5>
+    <p>
+      This can be useful in many different cases, but mostly used when you need to create a value that is a mix of
+      units, like percentages and pixels. eg. width: calc(100% - 16px);
+    </p>
+
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="tiny-box"></div>
+    </div>
+  </body>
+</html>
